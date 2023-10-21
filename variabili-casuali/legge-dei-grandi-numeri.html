@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="IT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/index-style.css" />
+    <link rel="stylesheet" href="../styles/content-style.css" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <link rel="apple-touch-icon" href="../resources/favicon.png" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78NHLXDQD8"></script>
+    <script src="../scripts/script.js"></script>
+    <style>:root { --bg-clr: #E34234; --fg-clr: #262626; }</style>
+    <meta name="theme-color" content="#E34234" />
+    <meta name="keywords" content="matematica applicata" />
+    <meta name="description" content="Il seguente sito contiene gli appunti e le definizioni del corso 'Matematica applicata'.">
+    <meta name="robots" content="index">
+    <script defer async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Matematica applicata - Variabili casuali - Legge dei grandi numeri</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-wrapper">
+            <div class="title-wrapper">
+                <span class="title">
+                    Matematica applicata
+                </span>
+                <span class="subtitle">
+                    by lorenzoarlo
+                </span>
+            </div>
+            <span class="page-title">
+                Variabili casuali
+            </span>
+        </header>
+        <section class="content-wrapper">
+            <h1 class="section-title content-width">Legge dei grandi numeri</h1>
+            <article class="content-container content-width">
+                <div class="definition environment" id="def2-29"><div class="environment-body">     Dato un esperimento, si considerino <span class="math-span">\( n\)</span> variabili casuali <span class="math-span">\( X_1, \ldots, X_n\)</span> con      <span class="math-block">\[         X_k = \text{"esito della $k$-esima misurazione"}       \]</span>     Si consideri inoltre che:     <ul class="list-container"><li class="list-item">ogni misurazione viene effettuata sempre nelle stesse condizioni, ovvero che <span class="math-span">\( X_1, \ldots, X_n\)</span> sono identicamente distribuite;         </li><li class="list-item">ogni misurazione viene effettuata in maniera indipendente, ovver che <span class="math-span">\( X_1, \ldots, X_n\)</span> sono indipendenti.     </li></ul>      Consideriamo ora un'ulteriore variabile casuale, ovvero <span class="math-span">\( \overline{X}\)</span> che indica la media aritmetica delle misure, ovvero     <span class="math-block">\[         \overline{X} = \frac{X_1 + \ldots + X_n}{n}       \]</span>     Ipotizzando che <span class="math-span">\( \mu = E[X_k]\)</span> si avrà che     <span class="math-block">\[         \begin{array}{lcl}             E[\overline{X}] &amp; = &amp; E\left[ \frac{\sum_{k = 1}^n X_k}{n} \right] \\             &amp; = &amp; \frac{1}{n} \cdot E\left[ \sum_{k = 1}^n X_k \right]  \\             &amp; = &amp; \frac{1}{n} \cdot \sum_{k = 1}^n E[X_k] \\             &amp; = &amp; \frac{1}{n} \cdot n \cdot \mu \\             &amp; = &amp; \mu         \end{array}     \]</span>     Consideriamo ora la varianza di <span class="math-span">\( \overline{X}\)</span>, si avrà che     <span class="math-block">\begin{aligned}        &amp; Var(\overline{X}) = Var\left( \frac{\sum_{k = 1}^n X_k}{n}  \right) &amp; =     \end{aligned}</span>     e dato che <span class="math-span">\( Var(\alpha \cdot X) = \alpha^2 \cdot Var(X)\)</span> si ha che     <span class="math-block">\begin{aligned}         &amp; = \frac{1}{n^2} \cdot Var\left( \sum_{k = 1}^n X_k  \right) &amp; =     \end{aligned}</span>     e data l'indipendenza delle variabili casuali che implica la covarianza nulla, si ha che <span class="math-span">\( Var(X + Y) = Var(X) + Var(Y) + \overbrace{2 \cdot Cov(X, Y)}^0\)</span><span class="math-block">\begin{aligned}         &amp; = \frac{1}{n^2} \cdot  \sum_{k = 1}^n Var( X_k ) &amp; = \\         &amp; = \frac{1}{n^2} \cdot  n \cdot Var( X_k ) &amp; = \\         &amp; = \frac{Var(X_k)}{n}     \end{aligned}</span>     Considerando quindi <span class="math-span">\( n \to +\infty\)</span> si avrà che     <span class="math-block">\[         Var(\overline{X}) = \frac{Var(X_k)}{n} \xrightarrow[n \to +\infty]{} 0      \]</span></div></div>
+            </article>
+            <nav class="buttons-container content-width">
+                <a class="navigation-button previous" href="funzione-generatrice-di-momenti.html" rel="nofollow"><span>Funzione generatrice di momenti</span></a>
+                
+            </nav>
+        </section>
+        <div class="scroll-to-bottom-button" onclick="scroll_to_bottom()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </div>
+        <footer class="footer-wrapper">
+            <div class="copyright-wrapper">
+                <span> &copy; Copyright 2023</span> /
+                <span>made by lorenzoarlo</span>
+            </div>
+            /
+            <div class="privacy-wrapper">
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/" rel="nofollow">Pannello preferenze cookie</a></span> /
+                <span><a href="https://lorenzoarlo.github.io/privacy-and-cookies/privacy-policy.html" rel="nofollow" target="_blank" >Privacy Policy</a></span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
